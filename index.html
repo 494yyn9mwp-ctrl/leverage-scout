@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,371 +48,189 @@
     flex-direction: column;
     padding: 0 20px 40px;
   }
-  .header {
-    padding: 32px 0 24px;
-    text-align: center;
-  }
-  .logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 13px;
-    letter-spacing: 4px;
-    color: var(--ember);
-    margin-bottom: 6px;
-  }
-  .tagline {
-    font-size: 12px;
-    color: var(--text-dim);
-    letter-spacing: 1px;
-  }
+  .header { padding: 32px 0 24px; text-align: center; }
+  .logo { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 4px; color: var(--ember); margin-bottom: 6px; }
+  .tagline { font-size: 12px; color: var(--text-dim); letter-spacing: 1px; }
   .progress-wrap { margin-bottom: 32px; }
-  .progress-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  .progress-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--text-dim);
-    letter-spacing: 1px;
-  }
-  .progress-track {
-    height: 3px;
-    background: var(--ash);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--ember-dim), var(--ember), var(--gold));
-    border-radius: 2px;
-    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--ash);
-    border-radius: 16px;
-    padding: 32px 28px;
-    margin-bottom: 20px;
-    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .q-number {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--ember);
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-  }
-  .q-text {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: var(--text);
-    margin-bottom: 28px;
-  }
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .option-btn {
-    background: transparent;
-    border: 1px solid var(--ash);
-    border-radius: 12px;
-    padding: 16px 20px;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    line-height: 1.4;
-    position: relative;
-    overflow: hidden;
-  }
-  .option-btn:hover { border-color: var(--ember-dim); transform: translateX(4px); }
+  .progress-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .progress-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .progress-track { height: 3px; background: var(--ash); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--ember-dim), var(--ember), var(--gold)); border-radius: 2px; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+  .card { background: var(--surface); border: 1px solid var(--ash); border-radius: 16px; padding: 32px 28px; margin-bottom: 20px; }
+  .q-number { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ember); letter-spacing: 2px; margin-bottom: 16px; }
+  .q-text { font-size: 20px; font-weight: 500; line-height: 1.4; color: var(--text); margin-bottom: 28px; }
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option-btn { background: transparent; border: 1px solid var(--ash); border-radius: 12px; padding: 16px 20px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 400; text-align: left; cursor: pointer; transition: all 0.2s ease; line-height: 1.4; }
   .option-btn.selected { border-color: var(--ember); background: rgba(232,98,42,0.12); }
-  .option-label {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--ember);
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-  }
-  .next-btn {
-    width: 100%;
-    background: linear-gradient(135deg, var(--ember-dim), var(--ember));
-    border: none;
-    border-radius: 12px;
-    padding: 18px;
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    letter-spacing: 0.5px;
-  }
-  .next-btn:hover { background: linear-gradient(135deg, var(--ember), var(--gold)); transform: translateY(-1px); }
-  .next-btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
-  .intro {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px 0;
-    animation: slideUp 0.5s ease;
-  }
+  .option-label { display: inline-block; font-family: 'DM Mono', monospace; font-size: 10px; color: var(--ember); letter-spacing: 1px; margin-bottom: 4px; }
+  .next-btn { width: 100%; background: linear-gradient(135deg, var(--ember-dim), var(--ember)); border: none; border-radius: 12px; padding: 18px; color: white; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; letter-spacing: 0.5px; }
+  .next-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .intro { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px 0; }
   .flame-icon { font-size: 48px; margin-bottom: 24px; display: block; }
-  .intro h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 52px;
-    line-height: 1;
-    margin-bottom: 16px;
-    background: linear-gradient(135deg, var(--text), var(--gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  .intro h1 { font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; margin-bottom: 16px; color: var(--text); }
   .intro p { font-size: 16px; line-height: 1.7; color: var(--text-dim); margin-bottom: 12px; }
   .intro .highlight { color: var(--ember); font-weight: 500; }
   .intro-meta { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--smoke); margin-bottom: 36px; letter-spacing: 1px; }
-  .start-btn {
-    background: linear-gradient(135deg, var(--ember-dim), var(--ember));
-    border: none;
-    border-radius: 14px;
-    padding: 20px;
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    width: 100%;
-  }
-  .start-btn:hover { background: linear-gradient(135deg, var(--ember), var(--gold)); transform: translateY(-2px); }
-  .loading {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    animation: slideUp 0.4s ease;
-  }
-  .ember-pulse {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--gold), var(--ember));
-    margin: 0 auto 24px;
-    animation: pulse 1.5s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 20px rgba(232,98,42,0.4); }
-    50% { transform: scale(1.15); opacity: 0.8; box-shadow: 0 0 40px rgba(232,98,42,0.7); }
-  }
+  .start-btn { background: linear-gradient(135deg, var(--ember-dim), var(--ember)); border: none; border-radius: 14px; padding: 20px; color: white; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; cursor: pointer; width: 100%; }
+  .loading { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .ember-pulse { width: 64px; height: 64px; border-radius: 50%; background: radial-gradient(circle, var(--gold), var(--ember)); margin: 0 auto 24px; animation: pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(232,98,42,0.4); } 50% { transform: scale(1.15); box-shadow: 0 0 40px rgba(232,98,42,0.7); } }
   .loading h2 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; margin-bottom: 12px; }
   .loading p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
-  .result { animation: slideUp 0.5s ease; padding-bottom: 40px; }
+  .result { padding-bottom: 40px; }
   .result-header { text-align: center; padding: 24px 0 32px; }
-  .result-header .flame-icon { font-size: 40px; margin-bottom: 16px; }
-  .result-header h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    letter-spacing: 2px;
-    background: linear-gradient(135deg, var(--text), var(--gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .result-card {
-    background: var(--surface);
-    border: 1px solid var(--ash);
-    border-radius: 16px;
-    padding: 28px;
-    margin-bottom: 16px;
-  }
-  .result-card h3 {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--ember);
-    margin-bottom: 14px;
-    text-transform: uppercase;
-  }
+  .result-card { background: var(--surface); border: 1px solid var(--ash); border-radius: 16px; padding: 28px; margin-bottom: 16px; }
+  .result-card h3 { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 3px; color: var(--ember); margin-bottom: 14px; text-transform: uppercase; }
   .result-card p { font-size: 15px; line-height: 1.75; color: var(--text); }
   .result-card.highlight-card { border-color: var(--ember-dim); background: rgba(232,98,42,0.07); }
   .result-card ul { list-style: none; padding: 0; }
-  .result-card ul li {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--ash);
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
+  .result-card ul li { font-size: 15px; line-height: 1.6; color: var(--text); padding: 10px 0; border-bottom: 1px solid var(--ash); display: flex; gap: 12px; }
   .result-card ul li:last-child { border-bottom: none; }
-  .step-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ember); min-width: 24px; padding-top: 2px; }
-  .restart-btn {
-    width: 100%;
-    background: transparent;
-    border: 1px solid var(--ash);
-    border-radius: 12px;
-    padding: 16px;
-    color: var(--text-dim);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-top: 8px;
-  }
-  .restart-btn:hover { border-color: var(--smoke); color: var(--text); }
-  .api-note {
-    background: rgba(240,165,0,0.06);
-    border: 1px solid var(--gold-dim);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-  }
+  .step-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ember); min-width: 24px; }
+  .restart-btn { width: 100%; background: transparent; border: 1px solid var(--ash); border-radius: 12px; padding: 16px; color: var(--text-dim); font-family: 'DM Sans', sans-serif; font-size: 14px; cursor: pointer; margin-top: 8px; }
+  .api-note { background: rgba(240,165,0,0.06); border: 1px solid var(--gold-dim); border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; }
   .api-note p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
   .api-note strong { color: var(--gold); }
-  .api-key-input {
-    background: transparent;
-    border: 1px solid var(--ash);
-    border-radius: 8px;
-    padding: 10px 14px;
-    color: var(--text);
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    width: 100%;
-    margin-top: 10px;
-    transition: border-color 0.2s;
-  }
-  .api-key-input:focus { outline: none; border-color: var(--gold-dim); }
+  .api-key-input { background: transparent; border: 1px solid var(--ash); border-radius: 8px; padding: 10px 14px; color: var(--text); font-family: 'DM Mono', monospace; font-size: 12px; width: 100%; margin-top: 10px; }
   .api-key-input::placeholder { color: var(--text-dim); }
-  .error-msg {
-    background: rgba(232,98,42,0.1);
-    border: 1px solid var(--ember-dim);
-    border-radius: 10px;
-    padding: 14px 18px;
-    font-size: 13px;
-    color: var(--text-dim);
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: var(--ash); border-radius: 2px; }
+  .error-msg { background: rgba(232,98,42,0.1); border: 1px solid var(--ember-dim); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-bottom: 16px; }
 </style>
 </head>
 <body>
 <div class="fire-bg"></div>
 <div class="container" id="app"></div>
 <script>
-const QUESTIONS = [
-  { id: 'identity', text: 'Do you want this income tied to you personally, or completely faceless?', type: 'choice', options: ['Tied to me — my name, my story', 'Completely faceless', 'Somewhere in between'] },
-  { id: 'income_type', text: 'What kind of income feels right?', type: 'choice', options: ['Recurring monthly (smaller but reliable)', 'One-time sales (bigger but unpredictable)', 'Both — I want multiple streams'] },
-  { id: 'budget', text: 'What are you comfortable spending to get started?', type: 'choice', options: ['Nothing — start completely free', 'Up to $100', 'Up to $300', 'Up to $1,000+'] },
-  { id: 'hands_on', text: 'Once it\'s running, how involved do you want to be?', type: 'choice', options: ['Set it and mostly forget it', 'Check in weekly — that\'s fine', 'I don\'t mind being actively involved'] },
-  { id: 'device', text: 'What\'s your primary device reality?', type: 'choice', options: ['Phone only', 'Mostly phone, occasional laptop', 'Laptop or desktop primarily'] },
-  { id: 'timeline', text: 'How quickly do you need to see results?', type: 'choice', options: ['Fast — I need something in 30 days', '3–6 months is fine', 'I\'m playing a long game — 6–12 months OK'] },
-  { id: 'fear', text: 'What\'s your biggest fear in this?', type: 'choice', options: ['Wasting money on the wrong thing', 'Wasting months on the wrong thing', 'Starting and not finishing — again', 'Looking stupid if it doesn\'t work'] },
-  { id: 'strength', text: 'What do people come to YOU about naturally?', type: 'choice', options: ['How to fix or build things', 'How to think — mindset, clarity', 'How to make or save money', 'Something else entirely'] },
-  { id: 'content', text: 'How do you feel about creating content?', type: 'choice', options: ['I actually enjoy it', 'It\'s fine if it\'s not constant', 'Feels like work — I\'d rather avoid it'] },
-  { id: 'audience', text: 'Do you have an existing audience anywhere?', type: 'choice', options: ['Yes — decent following somewhere', 'Small — a few hundred people maybe', 'Basically zero right now'] },
-  { id: 'knowledge', text: 'Do you feel like you have hard-won knowledge most people don\'t have?', type: 'choice', options: ['Yes — lived experience that took years', 'Some — but I haven\'t packaged it', 'Not sure what I\'d even offer'] },
-  { id: 'topic', text: 'What topic or world feels most natural to build around?', type: 'choice', options: ['Trades, home services, construction', 'Money, side income, online business', 'Mindset, life clarity, personal growth', 'I genuinely don\'t know yet'] },
-  { id: 'style', text: 'What do you naturally give people when you help them?', type: 'choice', options: ['The reframe — a new way to see it', 'The roadmap — step by step what to do', 'The warning — here\'s what to avoid', 'The shortcut — here\'s the faster path'] },
-  { id: 'focus', text: 'One focused thing or a few small bets running in parallel?', type: 'choice', options: ['One thing — I need to commit to something', 'A few small bets — I like options', 'Not sure yet'] },
-  { id: 'turning_point', text: 'Has there been a hard chapter that changed how you see things?', type: 'choice', options: ['Yes — and it\'s relevant to what I\'d build', 'Yes — but I\'d rather keep it separate', 'Not really — pretty steady path'] },
-  { id: 'win', text: 'What would make you feel like this is actually working?', type: 'choice', options: ['First dollar coming in — any amount', 'Consistent $500/month', '$2,000+ per month', 'Something I\'m proud of building'] },
-  { id: 'bottleneck', text: 'What\'s stopped you before — honestly?', type: 'choice', options: ['Shiny object syndrome — too many ideas', 'Didn\'t stick with one thing long enough', 'Didn\'t know where to start', 'Life got in the way'] },
-  { id: 'time', text: 'How many hours per week can you realistically put into this?', type: 'choice', options: ['1–3 hours', '4–7 hours', '8–15 hours', '15+ hours'] },
-  { id: 'energy', text: 'When do you have the most mental energy?', type: 'choice', options: ['Early morning', 'Midday', 'Evening', 'Inconsistent — I work in bursts'] },
-  { id: 'first_move', text: 'When you walk away from this, what do you most want?', type: 'choice', options: ['One clear thing to execute immediately', 'A short list of options to choose from', 'A full plan with steps mapped out'] }
+var QUESTIONS = [
+  { id: 'identity', text: 'Do you want this income tied to you personally, or completely faceless?', options: ['Tied to me — my name, my story', 'Completely faceless', 'Somewhere in between'] },
+  { id: 'income_type', text: 'What kind of income feels right?', options: ['Recurring monthly (smaller but reliable)', 'One-time sales (bigger but unpredictable)', 'Both — I want multiple streams'] },
+  { id: 'budget', text: 'What are you comfortable spending to get started?', options: ['Nothing — start completely free', 'Up to $100', 'Up to $300', 'Up to $1,000+'] },
+  { id: 'hands_on', text: 'Once it is running, how involved do you want to be?', options: ['Set it and mostly forget it', 'Check in weekly', 'I do not mind being actively involved'] },
+  { id: 'device', text: 'What is your primary device?', options: ['Phone only', 'Mostly phone, occasional laptop', 'Laptop or desktop primarily'] },
+  { id: 'timeline', text: 'How quickly do you need to see results?', options: ['Fast — I need something in 30 days', '3 to 6 months is fine', 'I am playing a long game — 6 to 12 months OK'] },
+  { id: 'fear', text: 'What is your biggest fear in this?', options: ['Wasting money on the wrong thing', 'Wasting months on the wrong thing', 'Starting and not finishing again', 'Looking stupid if it does not work'] },
+  { id: 'strength', text: 'What do people come to YOU about naturally?', options: ['How to fix or build things', 'How to think — mindset and clarity', 'How to make or save money', 'Something else entirely'] },
+  { id: 'content', text: 'How do you feel about creating content?', options: ['I actually enjoy it', 'It is fine if it is not constant', 'Feels like work — I would rather avoid it'] },
+  { id: 'audience', text: 'Do you have an existing audience anywhere?', options: ['Yes — decent following somewhere', 'Small — a few hundred people maybe', 'Basically zero right now'] },
+  { id: 'knowledge', text: 'Do you feel like you have hard-won knowledge most people do not have?', options: ['Yes — lived experience that took years', 'Some — but I have not packaged it', 'Not sure what I would even offer'] },
+  { id: 'topic', text: 'What topic feels most natural to build around?', options: ['Trades, home services, construction', 'Money, side income, online business', 'Mindset, life clarity, personal growth', 'I genuinely do not know yet'] },
+  { id: 'style', text: 'What do you naturally give people when you help them?', options: ['The reframe — a new way to see it', 'The roadmap — step by step what to do', 'The warning — here is what to avoid', 'The shortcut — here is the faster path'] },
+  { id: 'focus', text: 'One focused thing or a few small bets running in parallel?', options: ['One thing — I need to commit', 'A few small bets — I like options', 'Not sure yet'] },
+  { id: 'turning_point', text: 'Has there been a hard chapter that changed how you see things?', options: ['Yes — and it is relevant to what I would build', 'Yes — but I would rather keep it separate', 'Not really — pretty steady path'] },
+  { id: 'win', text: 'What would make you feel like this is actually working?', options: ['First dollar coming in — any amount', 'Consistent $500 per month', '$2,000 or more per month', 'Something I am proud of building'] },
+  { id: 'bottleneck', text: 'What has stopped you before — honestly?', options: ['Too many ideas — shiny object syndrome', 'Did not stick with one thing long enough', 'Did not know where to start', 'Life got in the way'] },
+  { id: 'time', text: 'How many hours per week can you realistically put into this?', options: ['1 to 3 hours', '4 to 7 hours', '8 to 15 hours', '15 or more hours'] },
+  { id: 'energy', text: 'When do you have the most mental energy?', options: ['Early morning', 'Midday', 'Evening', 'Inconsistent — I work in bursts'] },
+  { id: 'first_move', text: 'When you walk away from this, what do you most want?', options: ['One clear thing to execute immediately', 'A short list of options to choose from', 'A full plan with steps mapped out'] }
 ];
 
-let currentQ = 0;
-let answers = {};
-let screen = ‘intro’;
-let apiKey = ‘’;
-let resultData = null;
-let errorMsg = ‘’;
+var currentQ = 0;
+var answers = {};
+var screen = ‘intro’;
+var apiKey = ‘’;
+var resultData = null;
+var errorMsg = ‘’;
 
 function render() {
-const app = document.getElementById(‘app’);
+var app = document.getElementById(‘app’);
+if (!app) return;
+
 if (screen === ‘intro’) {
-app.innerHTML = <div class="header"><div class="logo">🛰️ LEVERAGE SCOUT</div></div> <div class="intro"> <span class="flame-icon">🔥</span> <h1>FIND YOUR FIRST MOVE</h1> <p>You've been thinking about making money online. Maybe for a while. The ideas aren't the problem — <span class="highlight">knowing which one to actually start is.</span></p> <p>Answer 20 honest questions. Get one clear, personalized first step — built for your life, your device, your pace.</p> <p class="intro-meta">~5 MINUTES · COMPLETELY PRIVATE · NO SIGNUP</p> <div class="api-note"> <p><strong>Your Anthropic API Key</strong><br>Paste your key below — it stays in your browser only, never stored anywhere.</p> <input class="api-key-input" type="password" placeholder="sk-ant-..." id="apiKeyInput" value="${apiKey}" oninput="apiKey = this.value" /> </div> ${errorMsg ?<div class="error-msg">${errorMsg}</div> : ''} <button class="start-btn" onclick="startQuiz()">START THE DIAGNOSTIC 🔥</button> </div>;
-} else if (screen === ‘quiz’) {
-const q = QUESTIONS[currentQ];
-const progress = Math.round((currentQ / QUESTIONS.length) * 100);
-const selected = answers[q.id];
-app.innerHTML = <div class="header"><div class="logo">🛰️ LEVERAGE SCOUT</div><div class="tagline">ONLINE INCOME DIAGNOSTIC</div></div> <div class="progress-wrap"> <div class="progress-meta"> <span class="progress-label">QUESTION ${currentQ + 1} OF ${QUESTIONS.length}</span> <span class="progress-label">${progress}%</span> </div> <div class="progress-track"><div class="progress-fill" style="width: ${progress}%"></div></div> </div> <div class="card"> <div class="q-number">Q${String(currentQ + 1).padStart(2, '0')}</div> <div class="q-text">${q.text}</div> <div class="options"> ${q.options.map((opt, i) =><button class=“option-btn ￼{q.id}’, ‘${opt.replace(/'/g, “\’”)}')”><span class="option-label">${String.fromCharCode(65+i)}</span><br>${opt}</button>).join('')} </div> </div> <button class="next-btn" onclick="nextQuestion()" ${!selected ? \'disabled\' : \'\'}>${currentQ < QUESTIONS.length - 1 ? 'NEXT →' : 'GET MY RESULT 🔥'}</button>;
-} else if (screen === ‘loading’) {
-app.innerHTML = <div class="loading"><div class="ember-pulse"></div><h2>READING THE SIGNAL</h2><p>Analyzing your answers and building<br>your personalized first move…</p></div>;
-} else if (screen === ‘result’) {
-const sections = parseResult(resultData);
-app.innerHTML = <div class="result"> <div class="result-header"><span class="flame-icon">🔥</span><h2>YOUR FIRST MOVE</h2></div> <div class="result-card highlight-card"><h3>🎯 THE CALL</h3><p>${sections.call || resultData}</p></div> ${sections.why ?<div class="result-card"><h3>💡 WHY THIS FITS YOU</h3><p>${sections.why}</p></div>: ''} ${sections.steps && sections.steps.length ?<div class="result-card"><h3>⚙️ YOUR FIRST 3 STEPS</h3><ul>${sections.steps.map((s, i) => <li><span class="step-num">0${i+1}</span><span>${s}</span></li>).join(’’)}</ul></div>: ''} ${sections.warning ?<div class="result-card"><h3>⚠️ WATCH FOR THIS</h3><p>${sections.warning}</p></div>: ''} ${sections.reminder ?<div class="result-card"><h3>🧭 REMEMBER</h3><p>${sections.reminder}</p></div> : ''} <button class="restart-btn" onclick="restart()">↩ Start Over</button> </div>;
+app.innerHTML = ‘<div class="header"><div class="logo">LEVERAGE SCOUT</div></div><div class="intro"><span class="flame-icon">🔥</span><h1>FIND YOUR FIRST MOVE</h1><p>You have been thinking about making money online. Maybe for a while. The ideas are not the problem — <span class="highlight">knowing which one to actually start is.</span></p><p>Answer 20 honest questions. Get one clear, personalized first step built for your life, your device, your pace.</p><p class="intro-meta">5 MINUTES · COMPLETELY PRIVATE · NO SIGNUP</p><div class="api-note"><p><strong>Your Anthropic API Key</strong><br>Paste your key below — it stays in your browser only, never stored anywhere.</p><input class="api-key-input" type="password" placeholder="sk-ant-..." id="apiKeyInput" /></div>’ + (errorMsg ? ‘<div class="error-msg">’ + errorMsg + ‘</div>’ : ‘’) + ‘<button class="start-btn" onclick="startQuiz()">START THE DIAGNOSTIC 🔥</button></div>’;
+var input = document.getElementById(‘apiKeyInput’);
+if (input) { input.value = apiKey; input.addEventListener(‘input’, function() { apiKey = this.value; }); }
+}
+
+else if (screen === ‘quiz’) {
+var q = QUESTIONS[currentQ];
+var progress = Math.round((currentQ / QUESTIONS.length) * 100);
+var selected = answers[q.id];
+var optionsHtml = ‘’;
+for (var i = 0; i < q.options.length; i++) {
+var opt = q.options[i];
+var sel = selected === opt ? ’ selected’ : ‘’;
+optionsHtml += ‘<button class="option-btn' + sel + '" data-value="' + i + '"><span class="option-label">’ + String.fromCharCode(65+i) + ‘</span><br>’ + opt + ‘</button>’;
+}
+app.innerHTML = ‘<div class="header"><div class="logo">LEVERAGE SCOUT</div><div class="tagline">ONLINE INCOME DIAGNOSTIC</div></div><div class="progress-wrap"><div class="progress-meta"><span class="progress-label">QUESTION ’ + (currentQ+1) + ’ OF ’ + QUESTIONS.length + ‘</span><span class="progress-label">’ + progress + ‘%</span></div><div class="progress-track"><div class="progress-fill" style="width:' + progress + '%"></div></div></div><div class="card"><div class="q-number">Q’ + String(currentQ+1).padStart(2,‘0’) + ‘</div><div class="q-text">’ + q.text + ‘</div><div class="options" id="opts">’ + optionsHtml + ‘</div></div><button class=“next-btn” id=“nextBtn” ’ + (!selected ? ‘disabled’ : ‘’) + ‘>’ + (currentQ < QUESTIONS.length-1 ? ‘NEXT’ : ‘GET MY RESULT 🔥’) + ‘</button>’;
+var opts = document.getElementById(‘opts’);
+if (opts) {
+opts.addEventListener(‘click’, function(e) {
+var btn = e.target.closest(’.option-btn’);
+if (btn) { answers[q.id] = q.options[parseInt(btn.getAttribute(‘data-value’))]; render(); }
+});
+}
+var nextBtn = document.getElementById(‘nextBtn’);
+if (nextBtn) { nextBtn.addEventListener(‘click’, function() { nextQuestion(); }); }
+}
+
+else if (screen === ‘loading’) {
+app.innerHTML = ‘<div class="loading"><div class="ember-pulse"></div><h2>READING THE SIGNAL</h2><p>Analyzing your answers and building your personalized first move</p></div>’;
+}
+
+else if (screen === ‘result’) {
+var sections = parseResult(resultData);
+var html = ‘<div class="result"><div class="result-header"><span class="flame-icon">🔥</span><h2>YOUR FIRST MOVE</h2></div><div class="result-card highlight-card"><h3>THE CALL</h3><p>’ + (sections.call || resultData) + ‘</p></div>’;
+if (sections.why) html += ‘<div class="result-card"><h3>WHY THIS FITS YOU</h3><p>’ + sections.why + ‘</p></div>’;
+if (sections.steps && sections.steps.length) {
+html += ‘<div class="result-card"><h3>YOUR FIRST 3 STEPS</h3><ul>’;
+for (var s = 0; s < sections.steps.length; s++) { html += ‘<li><span class="step-num">0’ + (s+1) + ‘</span><span>’ + sections.steps[s] + ‘</span></li>’; }
+html += ‘</ul></div>’;
+}
+if (sections.warning) html += ‘<div class="result-card"><h3>WATCH FOR THIS</h3><p>’ + sections.warning + ‘</p></div>’;
+if (sections.reminder) html += ‘<div class="result-card"><h3>REMEMBER</h3><p>’ + sections.reminder + ‘</p></div>’;
+html += ‘<button class="restart-btn" onclick="restart()">Start Over</button></div>’;
+app.innerHTML = html;
 }
 }
 
 function startQuiz() {
-if (!apiKey || !apiKey.startsWith(‘sk-ant-’)) {
-errorMsg = ‘Please enter a valid Anthropic API key (starts with sk-ant-) to get your personalized result.’;
+var input = document.getElementById(‘apiKeyInput’);
+if (input) apiKey = input.value;
+if (!apiKey || apiKey.indexOf(‘sk-ant-’) !== 0) {
+errorMsg = ‘Please enter a valid Anthropic API key starting with sk-ant-’;
 render(); return;
 }
 errorMsg = ‘’; screen = ‘quiz’; currentQ = 0; answers = {}; render();
 }
 
-function selectOption(id, value) { answers[id] = value; render(); }
-
 function nextQuestion() {
-if (currentQ < QUESTIONS.length - 1) { currentQ++; render(); window.scrollTo(0, 0); }
+if (currentQ < QUESTIONS.length - 1) { currentQ++; render(); window.scrollTo(0,0); }
 else { submitAnswers(); }
 }
 
-async function submitAnswers() {
+function submitAnswers() {
 screen = ‘loading’; render();
-const answersText = QUESTIONS.map(q => Q: ${q.text}\nA: ${answers[q.id] || 'No answer'}).join(’\n\n’);
-const prompt = You are a sharp, warm business advisor helping regular people figure out their first move toward online income. Someone just answered 20 diagnostic questions. Based ONLY on their answers, give them a highly personalized recommendation.\n\nHere are their answers:\n\n${answersText}\n\nRespond with exactly these sections:\n\nTHE CALL:\n[One clear sentence naming their specific first move.]\n\nWHY THIS FITS YOU:\n[2-3 sentences explaining why this path matches their answers.]\n\nYOUR FIRST 3 STEPS:\n[Three specific numbered actionable steps.]\n\nWATCH FOR THIS:\n[One sentence naming the trap this person is likely to fall into.]\n\nREMEMBER:\n[One short punchy reframe sentence.];
-try {
-const response = await fetch(‘https://api.anthropic.com/v1/messages’, {
+var answersText = ‘’;
+for (var i = 0; i < QUESTIONS.length; i++) {
+answersText += ’Q: ’ + QUESTIONS[i].text + ’\nA: ’ + (answers[QUESTIONS[i].id] || ‘No answer’) + ‘\n\n’;
+}
+var prompt = ‘You are a sharp, warm business advisor helping regular people figure out their first move toward online income. Someone just answered 20 diagnostic questions. Based ONLY on their answers, give them a highly personalized recommendation.\n\nAnswers:\n\n’ + answersText + ‘\n\nRespond with exactly these sections:\n\nTHE CALL:\n[One clear sentence naming their specific first move.]\n\nWHY THIS FITS YOU:\n[2-3 sentences explaining why.]\n\nYOUR FIRST 3 STEPS:\n[Three numbered actionable steps.]\n\nWATCH FOR THIS:\n[One sentence naming their likely trap.]\n\nREMEMBER:\n[One short punchy reframe sentence.]’;
+
+fetch(‘https://api.anthropic.com/v1/messages’, {
 method: ‘POST’,
 headers: { ‘Content-Type’: ‘application/json’, ‘x-api-key’: apiKey, ‘anthropic-version’: ‘2023-06-01’, ‘anthropic-dangerous-direct-browser-access’: ‘true’ },
 body: JSON.stringify({ model: ‘claude-sonnet-4-20250514’, max_tokens: 1000, messages: [{ role: ‘user’, content: prompt }] })
-});
-const data = await response.json();
+}).then(function(r) { return r.json(); }).then(function(data) {
 if (data.error) throw new Error(data.error.message);
 resultData = data.content[0].text;
-screen = ‘result’; render(); window.scrollTo(0, 0);
-} catch (err) {
-screen = ‘intro’; errorMsg = Something went wrong: ${err.message}. Check your API key and try again.; render();
-}
+screen = ‘result’; render(); window.scrollTo(0,0);
+}).catch(function(err) {
+screen = ‘intro’; errorMsg = ’Something went wrong: ’ + err.message; render();
+});
 }
 
 function parseResult(text) {
-const sections = {};
-const callMatch = text.match(/THE CALL:\s*([\s\S]?)(?=WHY THIS FITS YOU:|$)/i);
-const whyMatch = text.match(/WHY THIS FITS YOU:\s([\s\S]?)(?=YOUR FIRST 3 STEPS:|$)/i);
-const stepsMatch = text.match(/YOUR FIRST 3 STEPS:\s([\s\S]?)(?=WATCH FOR THIS:|$)/i);
-const warningMatch = text.match(/WATCH FOR THIS:\s([\s\S]?)(?=REMEMBER:|$)/i);
-const reminderMatch = text.match(/REMEMBER:\s([\s\S]?)$/i);
+var sections = {};
+var callMatch = text.match(/THE CALL:\s*([\s\S]?)(?=WHY THIS FITS YOU:|$)/i);
+var whyMatch = text.match(/WHY THIS FITS YOU:\s([\s\S]?)(?=YOUR FIRST 3 STEPS:|$)/i);
+var stepsMatch = text.match(/YOUR FIRST 3 STEPS:\s([\s\S]?)(?=WATCH FOR THIS:|$)/i);
+var warningMatch = text.match(/WATCH FOR THIS:\s([\s\S]?)(?=REMEMBER:|$)/i);
+var reminderMatch = text.match(/REMEMBER:\s([\s\S]?)$/i);
 if (callMatch) sections.call = callMatch[1].trim();
 if (whyMatch) sections.why = whyMatch[1].trim();
 if (stepsMatch) {
-const stepsRaw = stepsMatch[1].trim();
-sections.steps = stepsRaw.split(/\n+/).filter(s => s.trim().match(/^[\d-*]/)).map(s => s.replace(/^[\d.-*)]+\s/, ‘’).trim()).filter(Boolean);
-if (!sections.steps.length) sections.steps = stepsRaw.split(/\n+/).filter(s => s.trim()).map(s => s.trim());
+var stepsRaw = stepsMatch[1].trim();
+var lines = stepsRaw.split(’\n’).filter(function(s) { return s.trim(); });
+sections.steps = lines.map(function(s) { return s.replace(/^[\d.-*)]+\s/, ‘’).trim(); }).filter(function(s) { return s.length > 0; });
 }
 if (warningMatch) sections.warning = warningMatch[1].trim();
 if (reminderMatch) sections.reminder = reminderMatch[1].trim();
@@ -422,7 +238,8 @@ return sections;
 }
 
 function restart() { screen = ‘intro’; answers = {}; currentQ = 0; resultData = null; errorMsg = ‘’; render(); }
-document.addEventListener('DOMContentLoaded', function() { render(); });
+
+document.addEventListener(‘DOMContentLoaded’, function() { render(); });
 </script>
 
 </body>
