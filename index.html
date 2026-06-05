@@ -422,7 +422,7 @@ return sections;
 }
 
 function restart() { screen = ‘intro’; answers = {}; currentQ = 0; resultData = null; errorMsg = ‘’; render(); }
-render();
+document.addEventListener('DOMContentLoaded', function() { render(); });
 </script>
 
 </body>
